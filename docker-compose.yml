@@ -1,0 +1,12 @@
+version: '2'
+services:
+    docker-mean-fullstack:
+        build: .
+        image: docker-mean-fullstack
+        container_name: docker-mean-fullstack
+        volumes:
+            - /var/www:/var/www
+            - ~/:/root/
+            - .:/docker-mean-fullstack
+        ports:
+            - "8080"
